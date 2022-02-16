@@ -63,7 +63,7 @@ class server:
         self.config = config(path)
 
         self.__ensure_conf_key("ip_address", {})
-        self.__ensure_conf_key("motd", "Podrum Server")
+        self.__ensure_conf_key("motd", "Trumers Server")
         self.__ensure_conf_key("max_players", 20)
         self.__ensure_conf_key("max_view_distance", 2)
         self.__ensure_conf_key("world_provider", "anvil")
@@ -82,7 +82,12 @@ class server:
 
     async def start(self) -> None:
         start_time: float = time.time()
-        self.logger.info("Podrum is starting up...")
+        self.logger.info(" Starting Trumers...")
+        self.logger.info(f"  _____")
+        self.logger.info(f" |_   _| __ _   _ _ __ ___   ___ _ __ ___ ")
+        self.logger.info(f"   | || '__| | | | '_ ` _ \ / _ \ '__/ __| ")
+        self.logger.info(f"   | || |  | |_| | | | | | |  __/ |  \__ \ ")
+        self.logger.info(f"   |_||_|   \__,_|_| |_| |_|\___|_|  |___/ ")
         plugins_path: str = os.path.join(os.getcwd(), "plugins")
 
         if not os.path.isfile(plugins_path) and not os.path.isdir(plugins_path):
