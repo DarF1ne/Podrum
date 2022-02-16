@@ -83,11 +83,12 @@ class server:
     async def start(self) -> None:
         start_time: float = time.time()
         self.logger.info(" Starting Trumers...")
-        self.logger.info(f"  _____")
-        self.logger.info(f" |_   _| __ _   _ _ __ ___   ___ _ __ ___ ")
-        self.logger.info(f"   | || '__| | | | '_ ` _ \ / _ \ '__/ __| ")
-        self.logger.info(f"   | || |  | |_| | | | | | |  __/ |  \__ \ ")
-        self.logger.info(f"   |_||_|   \__,_|_| |_| |_|\___|_|  |___/ ")
+        self.logger.info(f"     _____")
+        self.logger.info(f"    |_   _| __ _   _ _ __ ___   ___ _ __ ___    ")
+        self.logger.info(f"      | || '__| | | | '_ ` _ \ / _ \ '__/ __|    ")
+        self.logger.info(f"      | || |  | |_| | | | | | |  __/ |  \__ \    ")
+        self.logger.info(f"      |_||_|   \__,_|_| |_| |_|\___|_|  |___/    ")
+        self.logger.info(f" \n ============-Trumers Info-================= \n Version: 1.0.0 \n Author: DarFine \n Original: https://github.com/Podrum/Podrum \n =========================================== ")
         plugins_path: str = os.path.join(os.getcwd(), "plugins")
 
         if not os.path.isfile(plugins_path) and not os.path.isdir(plugins_path):
